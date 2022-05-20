@@ -645,8 +645,7 @@ img {
 
 .projects-photo-div {
   position: relative;
-
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .projects-description {
