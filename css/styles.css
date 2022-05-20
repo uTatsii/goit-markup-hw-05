@@ -10,13 +10,16 @@
   --btn-hover: #188ce8;
   --icons: #afb1b8;
   --border-header-color: #ececec;
-  --hero-gradient: rgba(47, 48, 58, 0.4);
+  --main-background: rgba(47, 48, 58, 0.4);
+  --what-we-do-background: rgba(47, 48, 58, 0.8);
   --black-shadow-06: rgba(0, 0, 0, 0.06);
   --black-shadow-08: rgba(0, 0, 0, 0.08);
   --black-shadow-10: rgba(0, 0, 0, 0.1);
   --black-shadow-12: rgba(0, 0, 0, 0.12);
   --black-shadow-16: rgba(0, 0, 0, 0.16);
   --projects-border: #eeeeee;
+  --general-duration: 250ms;
+  --general-cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -131,7 +134,7 @@ img {
 }
 
 .nav-item {
-  position: relative; 
+  position: relative;
 }
 
 .nav-link {
@@ -139,6 +142,8 @@ img {
   padding: 32px 0;
 
   color: var(--main-text-color);
+
+  transition: color var(--general-duration) var(--general-cubic);
 }
 
 .current {
@@ -149,9 +154,8 @@ img {
   content: '';
 
   position: absolute;
-  bottom: 0;
   left: 0;
-  transform: translateY(1px);
+  bottom: -1px;
 
   display: block;
   width: 100%;
@@ -179,6 +183,8 @@ img {
   padding-bottom: 32px;
 
   color: var(--sub-color);
+
+  transition: color var(--general-duration) var(--general-cubic);
 }
 
 .contact-icon {
@@ -202,7 +208,7 @@ img {
   padding-bottom: 200px;
   margin: 0 auto;
 
-  background-image: linear-gradient(to right, var(--hero-gradient), var(--hero-gradient)),
+  background-image: linear-gradient(to right, var(--main-background), var(--main-background)),
     url(../images/hero/background-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -236,6 +242,8 @@ img {
   background-color: var(--web-logo-color);
   border-radius: 4px;
   border-style: none;
+
+  transition: background-color var(--general-duration) var(--general-cubic);
 }
 
 .hero-btn:hover,
@@ -310,6 +318,27 @@ img {
   margin-right: 30px;
 }
 
+.what-we-do-item {
+  position: relative;
+}
+
+.what-we-do-description {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 370px;
+  padding: 27px 0;
+
+  font-weight: 700;
+  line-height: 1.1428;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--main-white);
+
+  background-color: var(--what-we-do-background);
+}
+
 /*  Team  */
 
 .team {
@@ -373,6 +402,10 @@ img {
   height: 44px;
 
   fill: var(--icons);
+
+  transition: fill var(--general-duration) var(--general-cubic),
+    background-color var(--general-duration) var(--general-cubic),
+    border-radius var(--general-duration) var(--general-cubic);
 }
 
 .social-link:hover,
@@ -408,6 +441,9 @@ img {
   border: 1px solid var(--icons);
   border-radius: 4px;
   fill: var(--icons);
+
+  transition: fill var(--general-duration) var(--general-cubic),
+    border-color var(--general-duration) var(--general-cubic);
 }
 
 .clients-link:hover,
@@ -458,6 +494,8 @@ img {
 
 .footer-contact-link {
   color: var(--footer-contacts-color);
+
+  transition: color var(--general-duration) var(--general-cubic);
 }
 
 .footer-contact-link:hover,
@@ -496,6 +534,8 @@ img {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--main-white);
+
+  transition: background-color var(--general-duration) var(--general-cubic);
 }
 
 .footer-social-link:hover,
@@ -527,12 +567,10 @@ img {
   background-color: var(--team-background-color);
   border-radius: 4px;
   border-style: none;
-}
 
-.all {
-  color: var(--main-white);
-
-  background-color: var(--web-logo-color);
+  transition: color var(--general-duration) var(--general-cubic),
+    background-color var(--general-duration) var(--general-cubic),
+    box-shadow var(--general-duration) var(--general-cubic);
 }
 
 .filter-btn:hover,
@@ -542,6 +580,12 @@ img {
   background-color: var(--web-logo-color);
   box-shadow: 0 2px 2px 0 var(--black-shadow-12), 0 1px 2px 0 var(--black-shadow-08),
     0 3px 1px 0 var(--black-shadow-10);
+}
+
+.all {
+  color: var(--main-white);
+
+  background-color: var(--web-logo-color);
 }
 
 /*  Projects  */
@@ -562,6 +606,8 @@ img {
 .projects-link {
   display: block;
   width: 370px;
+
+  transition: box-shadow var(--general-duration) var(--general-cubic);
 }
 
 .projects-link:hover,
