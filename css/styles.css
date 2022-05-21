@@ -643,9 +643,9 @@ img {
   color: var(--sub-color);
 }
 
-.projects-photo-div {
+.projects-overlay {
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .projects-description {
