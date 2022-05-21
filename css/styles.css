@@ -645,14 +645,14 @@ img {
 
 .projects-photo-div {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .projects-description {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(100%); 
+  transform: translateY(294px); 
 
   width: 100%;
   padding: 63px 24px;
@@ -666,7 +666,7 @@ img {
   transition: transform var(--general-duration) var(--general-cubic);
 }
 
-.projects-photo-div:hover,
-.projects-photo-div:focus {
-  transform: translateY(-100%);
+.projects-link:hover .projects-description,
+.projects-link:focus .projects-description {
+  transform: translateY(0px);
 }
