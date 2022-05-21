@@ -652,7 +652,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(294px); 
+  transform: translateY(100%); 
 
   width: 100%;
   padding: 63px 24px;
@@ -668,5 +668,5 @@ img {
 
 .projects-link:hover .projects-description,
 .projects-link:focus .projects-description {
-  transform: translateY(0px);
+  transform: translateY(0%);
 }
