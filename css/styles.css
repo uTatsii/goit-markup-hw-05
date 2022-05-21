@@ -274,17 +274,28 @@ img {
   height: 100%;
   background-color: var(--black-shadow-02);
   position: fixed;
-  opacity: 1;
   top: 0;
   left: 0;
   z-index: 2;
-  transition: background-color var(--general-duration) var(--general-cubic);
+  animation-name: animateOpacity;
+  animation-duration: var(--general-duration);
+  animation-timing-function: var(--general-cubic);
 }
 
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+@keyframes animateOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .modal-wrapper {
@@ -295,6 +306,16 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@keyframes animateTranslate {
+  0% {
+    transform: translate(-1000%, -1000%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
 }
 
 .modal-btn {
@@ -312,53 +333,6 @@ img {
   align-items: center;
   padding: 0;
 }
-
-/* .backdrope.container {
-  position: fixed;
-
-  min-width: 500%;
-  height: 500%;
-  background-color: var(--black-shadow-02);
-  z-index: 1;
-  top: 0;
-  left: 0;
-}
-
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-
-  width: 528px;
-  height: 581px;
-
-  background-color: var(--main-white);
-}
-
-.modal-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  cursor: pointer;
-
-  width: 30px;
-  height: 30px;
-
-  top: 8px;
- right: 8px;
-
-
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-}
-
-.close-btn {
-  fill: var(--header-logo-color);
-} */
 
 /*  Benefits  */
 
