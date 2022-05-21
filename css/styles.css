@@ -277,9 +277,11 @@ img {
   top: 0;
   left: 0;
   z-index: 2;
+  visibility: visible;
   animation-name: animateOpacity;
   animation-duration: var(--general-duration);
   animation-timing-function: var(--general-cubic);
+  transition: visibility var(--general-duration) var(--general-cubic);
 }
 
 .backdrop.is-hidden {
