@@ -285,6 +285,8 @@ img {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  transition: visibility var(--general-duration) var(--general-cubic),
+  opacity var(--general-duration) var(--general-cubic);
 }
 
 .modal-wrapper {
