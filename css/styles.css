@@ -279,12 +279,15 @@ img {
   height: 100%;
 
   background-color: var(--black-shadow-02);
+
+  transition: all var(--general-duration) var(--general-cubic);
 }
 
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+
   transition: visibility var(--general-duration) var(--general-cubic),
   opacity var(--general-duration) var(--general-cubic);
 }
