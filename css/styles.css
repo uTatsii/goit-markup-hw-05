@@ -479,7 +479,6 @@ img {
 
   transition: fill var(--general-duration) var(--general-cubic),
     background-color var(--general-duration) var(--general-cubic),
-    border-radius var(--general-duration) var(--general-cubic);
 }
 
 .social-link:hover,
@@ -723,13 +722,13 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(100%);
+  transform: translateY(101%);
 
   width: 100%;
   padding: 63px 24px;
 
   font-size: 18px;
-  line-height: 1.5555;
+  line-height: 1.55;
   color: var(--main-white);
 
   background-color: rgba(33, 150, 243, 0.9);
