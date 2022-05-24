@@ -401,8 +401,11 @@ img {
   left: 0;
   bottom: 0;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 370px;
-  padding: 27px 0;
+  height: 70px;
 
   font-weight: 700;
   line-height: 1.1428;
